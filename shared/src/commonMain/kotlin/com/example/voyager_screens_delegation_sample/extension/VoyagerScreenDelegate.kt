@@ -14,7 +14,7 @@ class VoyagerScreenDelegate() : NavigatorDisposable {
   private val delegates = mutableStateMapOf<String, Any?>()
 
   override fun onDispose(navigator: Navigator) {
-    clearDelegate()
+    clearDelegates()
   }
 
   fun setDelegate(delegateKey: String, delegate: Any?) {
@@ -29,7 +29,7 @@ class VoyagerScreenDelegate() : NavigatorDisposable {
     delegates[delegateKey] = null
   }
 
-  private fun clearDelegate() {
+  private fun clearDelegates() {
     delegates.clear()
   }
 }
